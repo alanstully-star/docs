@@ -14,7 +14,10 @@
         "group": "Getting Started",
         "pages": [
           "quickstart",
-          "home"
+          "home",
+          "core-learning-domains",
+          "frameworks-and-guidelines",
+          "popular-preschool-pedagogical-approaches"
         ]
       }
     ],
