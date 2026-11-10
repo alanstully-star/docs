@@ -9,39 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      "untitled-page-2",
-      {
-        "group": "Getting Started",
-        "pages": [
-          "quickstart",
-          "home",
-          "core-learning-domains",
-          "frameworks-and-guidelines",
-          "popular-preschool-pedagogical-approaches",
-          "home-2",
-          "home-4",
-          "services",
-          "careers",
-          "home-3",
-          "gapvak-technologies",
-          "admissions",
-          "home-5",
-          "facilities",
-          "ratings-and-reviews"
-        ]
-      },
-      {
-        "group": "Fast and Furious 1 cars",
-        "pages": [
-          "fast-and-furious-1-cars",
-          "fast-and-furious-1/toyota-supra",
-          "fast-and-furious-1/dodge-charger",
-          "fast-and-furious-1/volkswagen-jetta",
-          "fast-and-furious-1/honda-s2000"
-        ]
-      }
-    ],
     "global": {
       "anchors": [
         {
@@ -55,7 +22,50 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "tabs": [
+      {
+        "tab": "Tully's Tiny Tots",
+        "pages": [
+          "untitled-page-2",
+          {
+            "group": "Getting Started",
+            "pages": [
+              "quickstart",
+              "home",
+              "core-learning-domains",
+              "frameworks-and-guidelines",
+              "popular-preschool-pedagogical-approaches",
+              "home-2",
+              "home-4",
+              "services",
+              "careers",
+              "home-3",
+              "gapvak-technologies",
+              "admissions",
+              "home-5",
+              "facilities",
+              "ratings-and-reviews"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Fast and Furious 1 cars",
+        "groups": [
+          {
+            "group": "Fast and Furious 1 cars",
+            "pages": [
+              "fast-and-furious-1-cars",
+              "fast-and-furious-1/toyota-supra",
+              "fast-and-furious-1/dodge-charger",
+              "fast-and-furious-1/volkswagen-jetta",
+              "fast-and-furious-1/honda-s2000"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
