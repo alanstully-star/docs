@@ -30,6 +30,16 @@
           "facilities",
           "ratings-and-reviews"
         ]
+      },
+      {
+        "group": "Fast and Furious 1 cars",
+        "pages": [
+          "fast-and-furious-1-cars",
+          "fast-and-furious-1/toyota-supra",
+          "fast-and-furious-1/dodge-charger",
+          "fast-and-furious-1/volkswagen-jetta",
+          "fast-and-furious-1/honda-s2000"
+        ]
       }
     ],
     "global": {
