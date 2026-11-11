@@ -64,6 +64,21 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Sport bikes",
+        "groups": [
+          {
+            "group": "Sport bikes",
+            "pages": [
+              "bikes",
+              "sport-bikes",
+              "sport-bikes/motogp",
+              "sport-bikes/ktm-duke",
+              "sport-bikes/superbikes"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -73,6 +88,10 @@
   },
   "navbar": {
     "links": [
+      {
+        "href": "https://tullystinytots.mintlify.app/bikes",
+        "label": "Bikes"
+      },
       {
         "label": "Support",
         "href": "mailto:support@mintlify.com"
