@@ -121,6 +121,13 @@
             "pages": [
               "student-app/troubleshooting/troubleshooting"
             ]
+          },
+          {
+            "group": "School Information",
+            "icon": "school",
+            "pages": [
+              "student-app/school-information/subjects"
+            ]
           }
         ]
       }
