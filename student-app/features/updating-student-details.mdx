@@ -1,0 +1,68 @@
+---
+title: "Updating student details"
+description: "How to change the information saved for a student."
+icon: "pen-to-square"
+---
+
+Use the edit screen to correct mistakes or keep a student's information up to date, for example a new phone number or address.
+
+<Note>
+  Button labels and editable fields below are typical examples. Replace them with the ones the app actually uses.
+</Note>
+
+## Update a student
+
+<Steps>
+  <Step title="Find the student">
+    Open the [student list](/student-app/features/student-records) and search for the student.
+  </Step>
+  <Step title="Open the edit form">
+    Select **Edit** next to the student, or open the record and select **Edit**.
+  </Step>
+  <Step title="Change the details">
+    Update the fields you need. The form shows the current values.
+  </Step>
+  <Step title="Save the changes">
+    Select **Update** (or **Save**). The app validates the form and saves the new details.
+  </Step>
+</Steps>
+
+## What can be changed
+
+| Field | Editable | Notes |
+| --- | --- | --- |
+| Full name | Yes | |
+| Date of birth | Yes | |
+| Email | Yes | Must stay unique. [Confirm] |
+| Phone number and address | Yes | |
+| Course or class | [Yes/No] | |
+| Student ID | No | Set when the student is registered and does not change |
+
+## Validation and errors
+
+The same rules apply as at registration. If a value is not accepted, the form shows a message next to the field. Fix the value and save again. Changes are only saved when the form is valid.
+
+## Behind the scenes
+
+Updating sends the changed fields to the backend API. [Confirm the endpoint and method (PUT or PATCH).]
+
+```http
+PUT /api/students/:id
+Content-Type: application/json
+
+{
+  "phone": "[new phone number]"
+}
+```
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Student registration" icon="user-plus" href="/student-app/features/student-registration">
+    The fields captured when a student is first added.
+  </Card>
+
+  <Card title="Deleting student records" icon="trash" href="/student-app/features/deleting-student-records">
+    Remove a student record.
+  </Card>
+</CardGroup>

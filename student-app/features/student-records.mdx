@@ -1,0 +1,59 @@
+---
+title: "Student records"
+description: "How to list, search and view registered students."
+icon: "address-book"
+---
+
+The student records screen shows every registered student. Use it to find a student, open their full record, and as the starting point for updating or deleting a record.
+
+<Note>
+  Screen labels, columns and search options below are typical examples. Replace them with the ones the app actually uses.
+</Note>
+
+## View the student list
+
+<Steps>
+  <Step title="Open the student list">
+    Select **Students** from the main menu. [Confirm the menu label.]
+  </Step>
+  <Step title="Browse the records">
+    The list shows each student's key details. Use the page controls if there are many students. [Confirm pagination.]
+  </Step>
+</Steps>
+
+| Column | Description |
+| --- | --- |
+| Student ID | Unique ID created at registration |
+| Name | The student's full name |
+| Email | The student's email address |
+| [Course or class] | [Where the student is enrolled] |
+| Actions | Buttons to view, edit or delete the record |
+
+## Search and filter
+
+Type in the search box to find a student by [name, email or student ID]. [Confirm the searchable fields and any filters.]
+
+## Open a student's record
+
+Select a student's name (or **View**) to open their full record, including all the details entered at registration.
+
+## Behind the scenes
+
+The list loads from the backend API. [Confirm the endpoints.]
+
+```http
+GET /api/students
+GET /api/students/:id
+```
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Updating student details" icon="pen-to-square" href="/student-app/features/updating-student-details">
+    Change a student's information.
+  </Card>
+
+  <Card title="Deleting student records" icon="trash" href="/student-app/features/deleting-student-records">
+    Remove a student record.
+  </Card>
+</CardGroup>
