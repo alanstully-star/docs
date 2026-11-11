@@ -97,29 +97,7 @@
             "pages": [
               "student-app/features/student-registration",
               "student-app/features/student-records",
-              "student-app/features/updating-student-details",
-              "student-app/features/deleting-student-records"
-            ]
-          },
-          {
-            "group": "Installation",
-            "icon": "download",
-            "pages": [
-              "student-app/installation/installation-guide"
-            ]
-          },
-          {
-            "group": "Configuration",
-            "icon": "gear",
-            "pages": [
-              "student-app/configuration/configuration"
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "wrench",
-            "pages": [
-              "student-app/troubleshooting/troubleshooting"
+              "student-app/features/updating-student-details"
             ]
           }
         ]
