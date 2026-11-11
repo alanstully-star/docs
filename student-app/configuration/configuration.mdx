@@ -1,0 +1,72 @@
+---
+title: "Configuration"
+description: "Environment variables and settings for the Student Registration App."
+icon: "gear"
+---
+
+The app reads its settings from environment variables, which are kept in `.env` files. Set these before you start the app.
+
+<Note>
+  The variable names below are typical for a Node.js and React app. Replace them with the ones in the project's `.env.example` file.
+</Note>
+
+<Warning>
+  Never commit `.env` files to Git, and never share database passwords or secret keys. Only commit an `.env.example` file with placeholder values.
+</Warning>
+
+## Backend settings
+
+Set these in the backend's `.env` file.
+
+| Variable | Required | Example | Description |
+| --- | --- | --- | --- |
+| `PORT` | No | `5000` | Port the API listens on |
+| `DATABASE_URL` | Yes | `[connection string]` | Connection string for the database. [Or separate host, user, password and name variables] |
+| `JWT_SECRET` | [If the app uses login] | `[long random string]` | Secret used to sign login tokens |
+| `NODE_ENV` | No | `development` | Use `production` when deployed |
+| `CORS_ORIGIN` | No | `http://localhost:3000` | Address of the frontend that may call the API |
+
+## Frontend settings
+
+Set these in the frontend's `.env` file.
+
+| Variable | Required | Example | Description |
+| --- | --- | --- | --- |
+| `REACT_APP_API_URL` | Yes | `http://localhost:5000/api` | Address of the backend API. [A Vite project uses `VITE_API_URL`] |
+
+<Tip>
+  Frontend variables are included in the built app and can be seen by anyone, so never put secrets in them.
+</Tip>
+
+## Example `.env` files
+
+<CodeGroup>
+
+```bash Backend .env
+PORT=5000
+DATABASE_URL=[your database connection string]
+JWT_SECRET=[a long random string]
+CORS_ORIGIN=http://localhost:3000
+```
+
+```bash Frontend .env
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+</CodeGroup>
+
+## Changing settings
+
+Restart the backend and frontend after you change an `.env` file. The values are read when the app starts.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Installation guide" icon="download" href="/student-app/installation/installation-guide">
+    Install and run the app.
+  </Card>
+
+  <Card title="Troubleshooting" icon="wrench" href="/student-app/troubleshooting/troubleshooting">
+    Fixes for common problems.
+  </Card>
+</CardGroup>

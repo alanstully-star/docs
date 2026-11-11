@@ -1,0 +1,81 @@
+---
+title: "Troubleshooting"
+description: "Fixes for common problems when installing, running and using the Student Registration App."
+icon: "wrench"
+---
+
+Use this page if something goes wrong while installing, running or using the app.
+
+<Note>
+  These are the most common problems in Node.js and React apps. Add the real errors your users see as you find them.
+</Note>
+
+## Installation problems
+
+<AccordionGroup>
+  <Accordion title="npm install fails">
+    - Check your Node.js version with `node --version` and install the version listed in the [Installation guide](/student-app/installation/installation-guide).
+    - Delete the `node_modules` folder and the lock file, then run `npm install` again.
+    - Check your internet connection and any proxy settings.
+  </Accordion>
+
+  <Accordion title="command not found: node or npm">
+    Node.js is not installed or is not on your PATH. Install Node.js, then open a new terminal window and try again.
+  </Accordion>
+</AccordionGroup>
+
+## Startup problems
+
+<AccordionGroup>
+  <Accordion title="Port already in use (EADDRINUSE)">
+    Another program is using the port. Stop that program, or change `PORT` in the backend `.env` file (and the matching frontend setting) and restart.
+  </Accordion>
+
+  <Accordion title="Cannot connect to the database">
+    - Check that the database is running.
+    - Check `DATABASE_URL` in the backend `.env` file for the right host, port, user, password and database name.
+    - Check that the database exists. See [Configuration](/student-app/configuration/configuration).
+  </Accordion>
+
+  <Accordion title="Environment variable is undefined">
+    - Check that the `.env` file is in the correct folder and the name is spelled exactly.
+    - Restart the app. Settings are only read at startup.
+    - For React, frontend variable names must start with the required prefix (`REACT_APP_` or `VITE_`).
+  </Accordion>
+</AccordionGroup>
+
+## Problems in the browser
+
+<AccordionGroup>
+  <Accordion title="The app loads but the student list is empty or shows an error">
+    - Check that the backend is running.
+    - Check that the frontend's API address (`REACT_APP_API_URL`) points to the backend.
+    - Open your browser's developer tools and look at the **Console** and **Network** tabs for the failing request.
+  </Accordion>
+
+  <Accordion title="CORS error in the browser console">
+    The backend is blocking requests from the frontend. Set `CORS_ORIGIN` in the backend `.env` file to the frontend's address and restart the backend.
+  </Accordion>
+</AccordionGroup>
+
+## Problems with students
+
+<AccordionGroup>
+  <Accordion title="Registration fails with a validation error">
+    Check that all required fields are filled in and that the email format is valid. See [Student registration](/student-app/features/student-registration).
+  </Accordion>
+
+  <Accordion title="Email already registered">
+    A student with that email already exists. Search for them in the [student list](/student-app/features/student-records) and update their record instead.
+  </Accordion>
+
+  <Accordion title="A student cannot be updated or deleted">
+    - Check that you have permission. [Confirm roles.]
+    - Refresh the list. The record may already have been deleted by someone else.
+    - Check that the backend is running.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+[Add support contact details or the link to report issues, for example the project's GitHub issues page.]
